@@ -1,0 +1,64 @@
+﻿html
+  head
+    title CS485_asgn1
+    style.
+      * { font-family: verdana; font-size: 10pt; COLOR: gray; }
+      b { font-weight: bold; }
+      table { border: 1px solid gray;}
+      td { text-align: center; padding: 25;}
+    link(rel='stylesheet', href='./css/themes/bg.css')
+    link#css-main(rel='stylesheet', href='./css/oneui.css')
+    link(rel='stylesheet', href='./css/boot/css/bootstrap.min.css')
+    link(rel='stylesheet' href='./css/mycss/loginModel.css')
+  body
+    .container
+      .row
+        .col-xs-12
+          br
+          center
+            h1 My Chat 0.0.1
+        .col-xs-12
+          br
+          br
+          br
+          br
+        .push-50-t.push-20.text-center
+          a.btn.btn-rounded.btn-noborder.btn-lg.btn-primary.push-5(data-toggle='appear', data-class='animated bounceIn', onclick="document.getElementById('loginPop').style.display='block'", style='width:auto;') เข้าสู่แชท
+        .col-xs-12
+          br
+          br
+          br
+          br
+          center
+            a.btn.btn-success.btn-xs(href='./about', role='button') เกี่ยวกับแชท
+#loginPop.modal
+    form.modal-content.animate.js-validation-login.form-horizontal.push-30-t.push-50(action='http://127.0.0.1:3000/chat', method='post')
+      // Login Block
+      .block.block-themed.animated.fadeIn
+        .block-header.bg-primary
+          ul.block-options
+          h3.block-title เข้าสู่ระบบ
+        .block-content.block-content-full.block-content-narrow
+          // Login Title
+          center
+            h2 My Chat
+            p ยินดีต้อนรับ กรุณาใส่ชื่อ
+          // END Login Title
+          // Login Form
+          form
+            .form-group
+              .col-xs-12
+                .form-material.form-material-primary.floating
+                  input#login-username.form-control(type='text', name='user[name]')
+                  label(for='login-username') ชื่อ
+            .form-group
+              .col-xs-12.col-sm-6.col-md-4
+                button.btn.bug-block.btn-primary(type='submit', value='Submit')
+                  i.si.si-login.pull-right
+                  |  เข้าสู่ระบบ		
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='./css/boot/js/bootstrap.min.js')
+    script(src='https://cdn-orig.socket.io/socket.io-1.7.3.js')
+    script(src='./js/index_page.js')

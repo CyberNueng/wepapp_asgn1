@@ -1,0 +1,38 @@
+﻿html
+  head
+    title CS485_asgn1
+    link(rel='stylesheet', href='./css/themes/bg.css')
+    link(rel='stylesheet', href='./css/oneui.css')
+    link(rel='stylesheet', href='./css/boot/css/bootstrap.min.css')
+  body
+    br
+    br
+    br
+    .col-xs-6.col-sm-offset-3
+      .block
+        .block
+          .bg-image(style="background-image: url('./img/bg-chat.jpg');")
+            .block-content.block-content-full.bg-black-op.text-center
+              br
+              h3.h4
+                span.text-white My Chat 0.0.1
+              br
+          .js-chat-talk.overflow-y-auto.block-content.block-content-full(data-chat-id='4')
+            // Messages
+            .font-s12.text-muted.text-center.push-20-t.push-15
+              em Yesterday
+            .block.block-rounded.block-transparent.push-15.push-50-l
+              .block-content.block-content-full.block-content-mini.bg-gray-lighter Hi there!
+            .font-s12.text-muted.text-center.push-20-t.push-10
+              em Today
+            .block.block-rounded.block-transparent.push-15.push-50-r
+              .block-content.block-content-full.block-content-mini.bg-gray-light Hi!!!
+            // END Messages
+          .js-chat-form.block-content.block-content-full.block-content-mini
+            form(action='base_ui_chat.php', method='post')
+              input.js-chat-input.form-control(type='text', data-target-chat-id='4', placeholder='พิมข้อความและกด Enter เพื่อส่งข้อความ')
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='./css/boot/js/bootstrap.min.js')
+    script(src='./js/base_ui_chat.js')
