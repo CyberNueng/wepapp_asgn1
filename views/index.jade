@@ -22,6 +22,7 @@
           br
           br
           br
+          br
         .push-50-t.push-20.text-center
           a.btn.btn-rounded.btn-noborder.btn-lg.btn-primary.push-5(data-toggle='appear', data-class='animated bounceIn', onclick="document.getElementById('loginPop').style.display='block'", style='width:auto;') เข้าสู่แชท
         .col-xs-12
@@ -30,9 +31,9 @@
           br
           br
           center
-            a.btn.btn-success.btn-xs(href='./about', role='button') เกี่ยวกับแชท
+            a.btn.btn-success.btn-xs(href='./about.html', role='button') เกี่ยวกับแชท
 #loginPop.modal
-    form.modal-content.animate.js-validation-login.form-horizontal.push-30-t.push-50(action='http://127.0.0.1:3000/chat', method='post')
+    form.modal-content.animate.js-validation-login.form-horizontal.push-30-t.push-50(action='/chat', method='GET')
       // Login Block
       .block.block-themed.animated.fadeIn
         .block-header.bg-primary
@@ -60,5 +61,4 @@
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
     // Include all compiled plugins (below), or include individual files as needed
     script(src='./css/boot/js/bootstrap.min.js')
-    script(src='https://cdn-orig.socket.io/socket.io-1.7.3.js')
     script(src='./js/index_page.js')
